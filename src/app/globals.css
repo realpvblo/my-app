@@ -2,32 +2,228 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
+@layer base {
   :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+    --background: 0 0% 100%;
+    --foreground: 240 10% 3.9%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 240 10% 3.9%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 240 10% 3.9%;
+
+    --primary: 240 5.9% 10%;
+    --primary-foreground: 0 0% 98%;
+
+    --secondary: 240 4.8% 95.9%;
+    --secondary-foreground: 240 5.9% 10%;
+
+    --muted: 240 4.8% 95.9%;
+    --muted-foreground: 240 3.8% 46.1%;
+
+    --accent: 240 4.8% 95.9%;
+    --accent-foreground: 240 5.9% 10%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 240 5.9% 90%;
+    --input: 240 5.9% 90%;
+    --ring: 240 10% 3.9%;
+
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 240 10% 3.9%;
+    --foreground: 0 0% 98%;
+
+    --card: 240 10% 3.9%;
+    --card-foreground: 0 0% 98%;
+
+    --popover: 240 10% 3.9%;
+    --popover-foreground: 0 0% 98%;
+
+    --primary: 0 0% 98%;
+    --primary-foreground: 240 5.9% 10%;
+
+    --secondary: 240 3.7% 15.9%;
+    --secondary-foreground: 0 0% 98%;
+
+    --muted: 240 3.7% 15.9%;
+    --muted-foreground: 240 5% 64.9%;
+
+    --accent: 240 3.7% 15.9%;
+    --accent-foreground: 0 0% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 240 3.7% 15.9%;
+    --input: 240 3.7% 15.9%;
+    --ring: 240 4.9% 83.9%;
   }
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    color: #fff;
+  }
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
+.myImage {
+  position: relative;
+}
+
+.myImage::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /* background-color: rgba(0, 0, 0, 0.5); */
+  border-radius: 24px;
+  /* border: 1px solid #e0e0e0; */
+}
+
+.waving-hand {
+  animation-name: wave-animation;
+  animation-duration: 2.5s;
+  animation-iteration-count: infinite;
+  transform-origin: 70% 70%;
+  display: inline-block;
+  margin-left: 15px;
+}
+
+@keyframes wave-animation {
+  0% {
+    transform: rotate(0.0deg)
   }
+
+  15% {
+    transform: rotate(14.0deg)
+  }
+
+  /* The following five values can be played with to make the waving more or less extreme */
+  30% {
+    transform: rotate(-8.0deg)
+  }
+
+  40% {
+    transform: rotate(14.0deg)
+  }
+
+  50% {
+    transform: rotate(-4.0deg)
+  }
+
+  60% {
+    transform: rotate(10.0deg)
+  }
+
+  70% {
+    transform: rotate(0.0deg)
+  }
+
+  /* Reset for the last half to pause */
+  100% {
+    transform: rotate(0.0deg)
+  }
+}
+
+.containerCanvas {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  column-gap: 10px;
+  row-gap: 15px;
+}
+
+/* custom background  */
+
+.workBadge-1,
+.workBadge-2,
+.workBadge-3,
+.workBadge-4 {
+  position: relative;
+
+  &:before {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    padding-top: .75rem;
+    padding-bottom: .75rem;
+    line-height: 1.375;
+    letter-spacing: 0.025em;
+    color: rgb(226 232 240 / var(--tw-text-opacity));
+    font-size: 0.875rem;
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    border-radius: 0.75rem;
+    top: 0;
+    left: 0;
+    background-color: black;
+    z-index: 2;
+    transition: opacity ease-in-out 0.5s;
+  }
+
+  &:hover:before {
+    opacity: 1;
+    transition: opacity ease-in-out 0.5s;
+  }
+
+  .second {
+    display: block;
+  }
+}
+
+.workBadge-4 {
+  &:before {
+    content: "I gained experience in graphic design, social media management, and running advertising campaigns. I also assisted in organizing and hosting local public events.";
+  }
+}
+
+.workBadge-3 {
+  &:before {
+    content: "I assisted customers in product selection and completing purchases. I was responsible for analyzing, reporting, and optimizing online marketing campaigns. I developed an online store using WordPress and WooCommerce.";
+  }
+}
+
+.workBadge-2 {
+  &:before {
+    content: "I learned the basics of front-end development, including HTML, CSS, JavaScript, and using Git for version control.";
+  }
+}
+
+.workBadge-1 {
+  &:before {
+    content: "I learned advanced front-end techniques, including SCSS and bundlers like Gulp, Parcel and Vite. I also gained experience with React, TypeScript, and working in a monorepo setup.";
+  }
+}
+
+.customShadow {
+  box-shadow: 0 0 0 4px rgba(30, 41, 59, 0.8);
+}
+
+@keyframes rotateAnimation {
+  0% {
+    transform: rotate(-5deg);
+  }
+
+  100% {
+    transform: rotate(25deg);
+  }
+}
+
+.pointer {
+  animation: rotateAnimation 1s infinite alternate;
 }
