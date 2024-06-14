@@ -60,14 +60,14 @@ return (
     </div> */}
     <div className="container max-w-3xl mx-auto px-4 py-16">
         <div className="relative">
-            <div className="border-r-2 border-slate-800/[0.8] absolute h-full top-0 left-1/2 transform -translate-x-1/2" />
+            <div className="border-r-2 border-slate-800/[0.8] absolute h-full top-0 md:left-1/2 transform -translate-x-1/2" />
             <div className="mb-8 flex justify-between items-center w-full right-timeline">
-                <div className="order-1 w-5/12" />
-                <div className="z-20 flex items-center order-1 bg-gray-800 shadow-xl w-8 h-8 rounded-full">
+                <div className="order-1 md:w-5/12" />
+                <div className="z-20 relative md:static -left-[15px] md:left-0 flex items-center order-1 bg-gray-800 shadow-xl w-8 h-8 rounded-full">
                     <h1 className="mx-auto font-semibold text-lg text-white">🧑🏽‍💻</h1>
                 </div>
                 <div
-                    className="workBadge-1 relative customShadow cursor-pointer order-1 bg-transparent rounded-xl box-border border-transparent hover:border-sky-400 border-2 shadow-sky-300 rounded-lg w-5/12 px-6 py-4 transition-all duration-500">
+                    className="workBadge-1 relative customShadow cursor-pointer order-1 bg-transparent rounded-xl box-border border-transparent hover:border-sky-400 border-2 shadow-sky-300 rounded-lg w-full md:w-5/12 px-6 py-4 transition-all duration-500">
                     <h3 className="mb-3 font-bold text-slate-50 text-xl">
                         Junior Frontend Developer
                     </h3>
@@ -80,13 +80,13 @@ return (
                     <img src="./pointer.png" alt="" className="pointer absolute w-8 right-0 z-10" />
                 </div>
             </div>
-            <div className="mb-8 flex justify-between flex-row-reverse items-center w-full left-timeline">
-                <div className="order-1 w-5/12" />
-                <div className="z-20 flex items-center order-1 bg-gray-800 shadow-xl w-8 h-8 rounded-full">
+            <div className="mb-8 flex justify-between md:flex-row-reverse items-center w-full right-timeline md:left-timeline">
+                <div className="order-1 md:w-5/12" />
+                <div className="z-20 relative md:static -left-[15px] md:left-0 flex items-center order-1 bg-gray-800 shadow-xl w-8 h-8 rounded-full">
                     <h1 className="mx-auto text-white font-semibold text-lg">🤓</h1>
                 </div>
                 <div
-                    className="workBadge-2 customShadow cursor-pointer order-1 bg-transparent rounded-xl box-border border-transparent hover:border-sky-400 border-2 shadow-sky-300 rounded-lg w-5/12 px-6 py-4 transition-all duration-500">
+                    className="workBadge-2 customShadow cursor-pointer order-1 bg-transparent rounded-xl box-border border-transparent hover:border-sky-400 border-2 shadow-sky-300 rounded-lg w-full md:w-5/12 px-6 py-4 transition-all duration-500">
                     <h3 className="mb-3 font-bold text-white text-xl">Intern</h3>
                     <p className="text-sm leading-snug tracking-wide text-slate-200 text-opacity-100">
                         Wirtualna Polska Media
@@ -97,12 +97,12 @@ return (
                 </div>
             </div>
             <div className="mb-8 flex justify-between items-center w-full right-timeline">
-                <div className="order-1 w-5/12" />
-                <div className="z-20 flex items-center order-1 bg-gray-800 shadow-xl w-8 h-8 rounded-full">
+                <div className="order-1 md:w-5/12" />
+                <div className="z-20 relative md:static -left-[15px] md:left-0 flex items-center order-1 bg-gray-800 shadow-xl w-8 h-8 rounded-full">
                     <h1 className="mx-auto font-semibold text-lg text-white">📚</h1>
                 </div>
                 <div
-                    className="workBadge-3 customShadow cursor-pointer order-1 bg-transparent rounded-xl box-border border-transparent hover:border-sky-400 border-2 shadow-sky-300 rounded-lg w-5/12 px-6 py-4 transition-all duration-500">
+                    className="workBadge-3 customShadow cursor-pointer order-1 bg-transparent rounded-xl box-border border-transparent hover:border-sky-400 border-2 shadow-sky-300 rounded-lg w-full md:w-5/12 px-6 py-4 transition-all duration-500">
                     <h3 className="mb-3 font-bold text-white text-xl">
                         Freelance Graphic Designer & No-code Developer
                     </h3>
@@ -114,13 +114,13 @@ return (
                     </p>
                 </div>
             </div>
-            <div className="mb-8 flex justify-between flex-row-reverse items-center w-full left-timeline">
-                <div className="order-1 w-5/12" />
-                <div className="z-20 flex items-center order-1 bg-gray-800 shadow-xl w-8 h-8 rounded-full">
+            <div className="mb-8 flex justify-between md:flex-row-reverse items-center w-full right-timeline md:left-timeline">
+                <div className="order-1 md:w-5/12" />
+                <div className="z-20 relative md:static -left-[15px] md:left-0 flex items-center order-1 bg-gray-800 shadow-xl w-8 h-8 rounded-full">
                     <h1 className="mx-auto text-white font-semibold text-lg">✏️</h1>
                 </div>
                 <div
-                    className="workBadge-4 customShadow cursor-pointer order-1 bg-transparent rounded-xl box-border border-transparent hover:border-sky-400 border-2 shadow-sky-300 rounded-lg w-5/12 px-6 py-4 transition-all duration-500">
+                    className="workBadge-4 customShadow cursor-pointer order-1 bg-transparent rounded-xl box-border border-transparent hover:border-sky-400 border-2 shadow-sky-300 rounded-lg w-full md:w-5/12 px-6 py-4 transition-all duration-500">
                     <h3 className="mb-3 font-bold text-white text-xl">
                         PR team member
                     </h3>
